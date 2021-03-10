@@ -1,0 +1,108 @@
+.our-specialists {
+    text-align: center;
+    margin-top: 220px;
+
+    .title {
+        font-family: 'Montserrat-Medium';
+
+        &_regular {
+            font-family: 'Montserrat-Light';
+        }
+    }
+
+    .grid-container {
+        color: #fff;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(117px, 376px));
+        height: 220px;
+
+        &__item {
+            width: 100%;
+            background: #1B1B1B;
+
+            &:hover {
+                box-shadow: 0px 6.92082px 30.2786px rgba(0, 0, 16, 0.7);
+            }
+        }
+        
+        &__title {
+            position: relative;
+            font-family: 'Montserrat-Medium';
+            max-width: 160px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        &__img {
+            height: $questionImgSize;
+            width: $questionImgSize;
+            top: -8px;
+            right: 7px;
+            left: auto;
+            padding: 3px;
+        }
+
+        .hard-skills .grid-container__img {
+            right: 1px;
+        }
+
+        &__desc {
+            font-family: 'Montserrat-Light';
+            font-size: 1.18rem;
+            line-height: 1.8rem;
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .our-specialists {
+
+        .grid-container {
+            max-width: 100%;
+        }
+    }
+}
+
+$itemHeight: 125px;
+
+@media screen and (max-width: 768px) {
+    .our-specialists {
+
+        .grid-container {
+            grid-template-rows: $itemHeight $itemHeight;
+
+            &__item {
+                height: $itemHeight;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .our-specialists {
+        margin-top: 133px;
+
+        .grid-container {
+            &__title {
+                font-size: 2.5rem;
+            }
+
+            &__desc {
+                font-size: 2.18rem;
+                line-height: 2.8rem;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .soft-skills,
+            .hard-skills {
+                .grid-container__img {
+                    right: -20px;
+                }
+            }
+        }
+    }
+}

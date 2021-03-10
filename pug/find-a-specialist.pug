@@ -1,0 +1,26 @@
+block find-a-specialist
+    header.find-a-specialist
+        img.find-a-specialist__overlay(src="assets/img/find-a-specialist/find-a-specialist-bg.jpg")
+        
+        div.search
+            h2.search__title.title Находим специалистов, 
+                span.text_montserrat-bold которым #[br] не нужно объяснять, как работать
+                
+            div.search__select-wrapper
+                input.select.text_montserrat-regular(readonly="true")
+                
+                div.menu-toggler
+                    svg.menu-toggler__arrow-up(width="11", height="9", viewBox="0 0 11 9", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M5.54135 0.284668L10.531 8.92701H0.551688L5.54135 0.284668Z", fill="#DADADA")
+                    svg.menu-toggler__arrow-down(width="11", height="10", viewBox="0 0 11 10", fill="none", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M5.54117 9.21191L0.551518 0.569573L10.5308 0.569574L5.54117 9.21191Z", fill="#DADADA")
+                        
+                div.menu.text_montserrat-regular
+                    span.search__option.option.frontend Front-end
+                    span.search__option.option.uxui UX/UI-designer
+                    span.search__option.option.market Market manager
+                    span.search__option.option.backend Back-end
+                    
+            button.btn.btn_find
+                img.btn_find__img(src="assets/img/find-a-specialist/magnifier.svg")
+                span.btn.btn_find__text Найти

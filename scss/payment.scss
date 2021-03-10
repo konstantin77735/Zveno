@@ -1,0 +1,73 @@
+.payment,
+.commission {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+    height: 175px;
+    margin: 100px auto 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        position: absolute;
+        top: -36px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .title {
+        margin-top: 35px;
+    }
+}
+
+.commission {
+    margin-top: 160px;
+    height: 200px;
+
+    .title {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .payment,
+    .commission {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .payment,
+    .commission {
+        height: auto;
+        text-align: center;
+
+
+        .title {
+            max-width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .payment,
+    .commission {
+        margin-top: 100px;
+
+        &__img {
+            width: 45px;
+            top: -25px;
+        }
+
+        .title {
+            margin-top: 33px;
+            margin-bottom: 33px;
+        }
+    }
+}

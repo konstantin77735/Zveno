@@ -1,0 +1,20 @@
+block find-a-job
+
+section.find-a-job
+    img.overlay.find-a-job__overlay(src="assets/img/find-a-job/bg.jpg")
+    
+    div.find-a-job__content-container
+        h2.title.text_montserrat-light Найдите работу, #[br] которая подходит 
+            span.text_montserrat-bold именно вам
+    
+        form.form.find-a-job__form
+            input(type="text", placeholder="Имя").find-a-job__input.find-a-job__input_name
+            input(type="text", placeholder="Фамилия").find-a-job__input.find-a-job__input_surname
+            input(type="text", placeholder="Должность").find-a-job__input.find-a-job__input_post
+        
+            button.btn.btn_upload-resume
+                img.btn_find__img(src="assets/img/find-a-job/upload-resume.svg")
+                span.btn_find__text Загрузить резюме
+            button.btn.btn_find
+                img.btn_find__img(src="assets/img/find-a-specialist/magnifier.svg")
+                span.btn_find__text Найти

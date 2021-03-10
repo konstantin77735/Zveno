@@ -1,0 +1,215 @@
+.nav {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    max-height: 15%;
+    margin: auto;
+    position: relative;
+    top: 16px;
+    color: #fff;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(150px, 260px) minmax(0, $emptyNavCellWidth) minmax(65px, 110px) minmax(76px, 122px) minmax(45px, 100px) minmax(0, $emptyNavCellWidth) minmax(30px, 40px) minmax(30px, 40px) minmax(100px, 140px);
+    grid-template-areas: 'logo . companies applicants vacancies . inst mail number';
+
+
+    .burger {
+        grid-area: burger;
+    }
+
+    .menu_show {
+        height: 140px;
+        opacity: 1;
+    }
+
+    &__item-rounded {
+        padding: $paddingOfWhiteNavElems;
+        max-height: $heightOfWhiteNavElems;
+        border-radius: 200px;
+    }
+
+
+    .img-wrapper {
+        display: block;
+        max-width: 21px;
+
+        &__img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+    .logo {
+        grid-area: logo;
+        max-width: 320px;
+        font-size: 1.5rem;
+        display: grid;
+        grid-template-columns: minmax(71px, 63px) 14px minmax(90px, 194px);
+        grid-template-areas:
+            'logo-img . title'
+            'logo-img . desc';
+
+        &__img {
+            grid-area: logo-img;
+            height: 100%;
+        }
+
+        &__title {
+            grid-area: title;
+            font-family: 'Gilroy-Medium';
+            font-size: 3rem;
+        }
+
+        &__description {
+            grid-area: desc;
+            font-family: 'Gilroy-Light';
+            font-size: 1rem;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .companies {
+        grid-area: companies;
+    }
+
+    .applicants {
+        grid-area: applicants;
+    }
+
+    .vacancies {
+        grid-area: vacancies;
+    }
+
+    .inst {
+        grid-area: inst;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+
+    .number {
+        color: #000;
+        font-size: 1.55rem;
+        grid-area: number;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__item {
+        font-size: 1.7rem;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .2s linear;
+        
+        &:hover:not(.number) {
+            color: #ddd;
+        }
+
+        &_white {
+            background: #fff;
+            
+            &:hover {
+                box-shadow: 0 0 12px #fff;
+            }
+        }
+    }
+}
+
+.nav-footer {
+    position: relative;
+    top: -10px;
+    color: #777;
+
+    .logo {
+        &:hover {
+            color: #777;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav {
+        max-width: 98%;
+
+        .logo {
+            grid-template-columns: minmax(58px, 66px) 0 minmax(99px, 140px);
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav {
+        .logo {
+            grid-template-columns: minmax(30px, 41px) 5px minmax(86px, 110px);
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav {
+        grid-template-areas: 'logo . burger burger'
+            '. . companies companies'
+            '. . applicants applicants'
+            '. . vacancies vacancies'
+            '. . inst mail'
+            '. . number number';
+        grid-template-columns: 1fr 1fr 54px 54px;
+        grid-column-gap: 3px;
+        grid-row-gap: 7px;
+
+        &__item {
+            font-size: 2.3rem;
+        }
+
+        .number {
+            height: 32px;
+            font-size: 2.1rem;
+        }
+
+        .logo {
+            width: 100%;
+        }
+
+
+
+        &__item,
+        .img-wrapper,
+        .number {
+            display: none;
+            cursor: default;
+        }
+
+
+        .inst,
+        .mail {
+            max-width: 15px;
+            max-height: 15px;
+        }
+
+
+    }
+
+    .nav-footer {
+        top: 110px;
+        grid-template-areas:
+            '. . companies companies'
+            '. . applicants applicants'
+            '. . vacancies vacancies'
+            '. . inst mail'
+            '. . number number'
+            'logo . burger burger';
+
+
+    }
+}

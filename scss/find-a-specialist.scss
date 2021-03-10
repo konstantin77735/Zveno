@@ -1,0 +1,249 @@
+.find-a-specialist {
+    position: relative;
+    color: #fff;
+    height: 100vh;
+
+    &__overlay {
+        width: 100%;
+        border-radius: 0 0 0 185px;
+        position: absolute;
+        top: -60px;
+    }
+
+    .search {
+        position: relative;
+        z-index: 0;
+        margin: auto;
+        max-width: 760px;
+        top: 140px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 133px 335px 190px 133px;
+        grid-template-areas:
+            'title title title title'
+            '. search btn_find  .';
+
+        &__title {
+            grid-area: title;
+            text-align: center;
+            margin-top: 0px;
+
+        }
+
+        .btn_find {
+            grid-area: btn_find;
+            font-family: 'Montserrat-Light';
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 70%;
+            margin-left: 22px;
+
+            top: 20px;
+            left: 0;
+            position: relative;
+
+            &__img {
+                height: 15px;
+                margin-right: 9px;
+            }
+        }
+
+        &__select-wrapper {
+            position: relative;
+            grid-area: search;
+            top: 20px;
+
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+
+        &__option {
+            border-bottom: 1px solid #aaa;
+            padding: 12px 0px 5px 15px;
+            transition: background .2s linear;
+            cursor: pointer;
+
+
+            &:hover {
+                background: #eee
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .menu-toggler {
+            width: 25px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__arrow-up,
+            &__arrow-down {
+                cursor: pointer;
+            }
+
+            &__arrow-up {
+                margin-bottom: 2px;
+            }
+
+            &__arrow-down {
+                margin-top: 2px;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            color: #000;
+            background: #fff;
+            border-radius: 4px;
+            line-height: 3rem;
+            font-size: 1.3rem;
+            width: 100%;
+            overflow: hidden;
+
+            /* Указываем изначальны*/
+            height: 0;
+            opacity: 0;
+            transition: opacity .25s linear .25s, height 0s linear 0s;
+
+
+            &_show {
+                /* Меняем эти свойства и блок будет появлятся*/
+                /* trainsion не работает с height: auto, только с конкретным значением */
+                height: 200px;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1300px) {
+    .find-a-specialist {
+        height: 65vh;
+
+        &__overlay {
+            border-radius: 0;
+        }
+
+        .search {
+            .menu {
+                max-height: 173px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1050px) {
+    .find-a-specialist {
+        height: 55vh;
+
+        &__overlay {
+            height: 110%;
+            border-radius: 0;
+        }
+
+        .search {
+            &__title {
+                max-width: 90%;
+                margin: auto;
+            }
+
+            .menu {
+                max-height: 172px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .find-a-specialist {
+        &__overlay {}
+
+        .search {
+
+            &__title {
+                max-width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .find-a-specialist {
+
+        &__overlay {
+            top: -74px;
+        }
+
+        .search {
+            .menu {
+                max-height: 140px;
+                font-size: 1.78rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .find-a-specialist {
+        top: -90px;
+
+        &__overlay {
+            top: 9px;
+            height: 82%;
+        }
+
+        .search {
+            max-height: 35px;
+            max-width: 90%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                'title title title title'
+                'search search btn_find btn_find';
+
+            &__title {
+                font-size: 2.5rem;
+                max-width: 95%;
+            }
+
+            &__select-wrapper {
+                justify-self: end;
+                max-width: 200px;
+                max-height: 35px;
+            }
+
+            .select {
+                max-height: 35px;
+            }
+
+            .btn_find {
+                max-width: 120px;
+                max-height: 35px;
+                margin-left: 40px;
+            }
+        }
+    }
+}

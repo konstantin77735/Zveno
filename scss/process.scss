@@ -1,0 +1,372 @@
+.process {
+    text-align: center;
+
+    .grid-container {
+        grid-template-areas:
+            'zero1 pyramid .'
+            '. pyramid zero2'
+            'zero3 pyramid .'
+            '. pyramid zero4'
+            'zero5 pyramid .';
+        grid-auto-rows: 71px;
+        /* exp */
+        grid-row-gap: 0;
+
+        &__item {
+            text-align: start;
+            display: flex;
+            font-family: 'Montserrat-Medium';
+            background: #ecebf7;
+            padding: 1rem 0;
+
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+
+            &:hover {
+                cursor: default;
+                box-shadow: none;
+            }
+        }
+
+        &__img {
+            top: -7px;
+            left: 0;
+            right: auto;
+            background: none;
+            position: relative;
+            margin: 0;
+        }
+
+        .pyramid {
+            grid-area: pyramid;
+            max-width: 100%;
+            z-index: 1;
+            background: none;
+        }
+
+        .text_important {
+            position: relative;
+        }
+
+        .zero1 {
+            grid-area: zero1;
+            width: 384px;
+            max-width: 435px;
+
+            &__img {
+                position: absolute;
+                height: $questionImgSize;
+                width: $questionImgSize;
+                background: #5243FF;
+                cursor: pointer;
+
+                top: -10px;
+                left: auto;
+                right: -17px;
+                padding: 2px;
+            }
+        }
+
+        .zero2 {
+            grid-area: zero2;
+            width: 360px;
+            max-width: 440px;
+            justify-self: self-end;
+            justify-content: flex-end;
+        }
+
+        .zero3 {
+            grid-area: zero3;
+            width: 384px;
+            max-width: 435px;
+
+            &__img {
+                position: absolute;
+                height: $questionImgSize;
+                width: $questionImgSize;
+                background: #5243FF;
+                cursor: pointer;
+
+                top: -10px;
+                left: auto;
+                right: -17px;
+                padding: 2px;
+            }
+        }
+
+        .zero4 {
+            grid-area: zero4;
+            width: 384px;
+            max-width: 435px;
+            justify-self: self-end;
+            justify-content: flex-end;
+
+            &__img {
+                position: absolute;
+                height: $questionImgSize;
+                width: $questionImgSize;
+                background: #5243FF;
+                cursor: pointer;
+
+                top: -1px;
+                left: auto;
+                right: -17px;
+                padding: 2px;
+            }
+
+            .hint {
+                bottom: 25px;
+                right: -234px;
+            }
+        }
+
+        .zero5 {
+            grid-area: zero5;
+            width: 384px;
+            max-width: 435px;
+            border-radius: 10px 10px 0px 10px;
+
+
+        }
+
+        .zero2,
+        .zero4 {
+            padding-right: 5%;
+            width: 145%;
+        }
+
+
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .process {
+        .grid-container {
+            justify-content: center;
+            /* grid-template-columns: minmax(200px, 325px) minmax(200px, 325px) minmax(200px, 325px); */
+            grid-template-columns: 200px 260px 200px;
+
+            .pyramid {
+                justify-self: center;
+            }
+
+
+
+            .zero1,
+            .zero2,
+            .zero3,
+            .zero4,
+            .zero5 {
+                width: 330px;
+                max-width: initial;
+            }
+
+            .zero4 {
+                .hint {
+                    min-width: 180px;
+                    right: auto;
+                    left: -125px;
+
+                    &__img {
+                        left: auto;
+                        right: 17px;
+                        transform: rotateZ(-90deg) scaleY(1);
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .process {
+        br {
+            display: block
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .process {
+        margin-top: 200px;
+
+        .grid-container {
+            grid-template-columns: 170px 260px 170px;
+
+            .zero1,
+            .zero2,
+            .zero3,
+            .zero4,
+            .zero5 {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .process {
+        .grid-container {
+            grid-template-areas:
+                'zero1 pyramid'
+                'zero2 pyramid'
+                'zero3 pyramid'
+                'zero4 pyramid'
+                'zero5 pyramid ';
+            grid-template-columns: 1fr 2fr;
+            max-width: 95%;
+
+            margin-left: 7%;
+            grid-auto-rows: 38px;
+            grid-row-gap: 25px;
+
+
+
+            .pyramid {
+                height: 100%;
+                max-height: initial;
+            }
+
+            .zero2,
+            .zero4 {
+                padding-right: 0;
+                justify-self: flex-start;
+                justify-content: start;
+            }
+
+            .zero1,
+            .zero2,
+            .zero3,
+            .zero4,
+            .zero5 {
+                width: 200%;
+                height: 100%;
+                max-width: initial;
+            }
+
+            &__img {
+                height: 18px;
+                width: 18px;
+                padding: 4px;
+            }
+
+            .zero1__p,
+            .zero2__p,
+            .zero3__p,
+            .zero4__p,
+            .zero5__p {
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+                margin: 0;
+            }
+
+            .zero1__p {
+                .hint {
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+                    min-width: 180px;
+                    left: 22px;
+                }
+            }
+
+            .zero3__p {
+                .hint {
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+                }
+            }
+
+            .zero4__p {
+                .hint {
+                    bottom: 23px;
+                    right: -195px;
+                    left: auto;
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+
+                    &__img {
+                        transform: rotateZ(-90deg) scaleY(-1);
+                        right: auto;
+                        left: 15px;
+                    }
+                }
+            }
+
+            &__item {
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .process {
+        .grid-container {
+            grid-template-areas:
+                'zero1'
+                'zero2'
+                'zero3'
+                'zero4'
+                'zero5'
+                'pyramid';
+            grid-template-columns: 1fr;
+            margin: 30px auto 0 auto;
+            grid-row-gap: 15px;
+            grid-template-rows: 38px 38px 38px 38px 38px 233px;
+
+            .pyramid {
+                max-height: initial;
+            }
+
+            .zero1,
+            .zero2,
+            .zero3,
+            .zero4,
+            .zero5 {
+                width: 100%;
+            }
+
+            .zero1 {
+                .hint {
+                    left: auto;
+                    right: -58px;
+
+                    &__img {
+                        transform: rotateZ(-90deg) scaleY(1);
+                        left: auto;
+                        right: 40px;
+                    }
+                }
+            }
+
+            .zero3 {
+                .hint {
+                    left: auto;
+                    right: -115px;
+
+                    &__img {
+                        transform: rotateZ(-90deg) scaleY(1);
+                        left: auto;
+                        right: 97px;
+                    }
+                }
+            }
+
+            .zero4 {
+                .hint {
+                    left: auto;
+                    right: -86px;
+
+                    &__img {
+                        transform: rotateZ(-90deg) scaleY(1);
+                        left: auto;
+                        right: 67px;
+                    }
+                }
+            }
+        }
+    }
+}

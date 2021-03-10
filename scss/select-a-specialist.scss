@@ -1,0 +1,125 @@
+.select-a-specialist {
+    margin-top: 140px;
+    color: #fff;
+    position: relative;
+    display: grid;
+    grid-template-areas: "title . btn";
+    grid-template-columns: auto minmax(0px, 47px) auto;
+    align-items: center;
+    padding: 0 198px;
+
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 43vh;
+        border-radius: 0 275px 0 275px;
+
+    }
+
+    .title {
+        font-family: 'Montserrat-light';
+        grid-area: title;
+        z-index: 1;
+        margin: 0;
+    }
+
+    .btn_find {
+        border-radius: 25px;
+        max-height: 55px;
+        width: 211px;
+        max-width: 400px;
+
+        position: relative;
+        z-index: 1;
+        grid-area: btn;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .top-arrow,
+        .bottom-arrow {
+            position: absolute;
+
+            &:hover {
+                cursor: default;
+            }
+        }
+
+        .top-arrow {
+            top: -70px;
+            left: -188px;
+        }
+
+        .bottom-arrow {
+            bottom: -66px;
+            left: -23px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .select-a-specialist {
+        padding: 0 85px;
+
+        .title {
+            justify-self: end;
+        }
+
+        &__overlay {
+            border-radius: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .select-a-specialist {
+        grid-template-columns: minmax(10px, 416px) 15px minmax(10px, 195px);
+        grid-template-areas: "title . btn";
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .select-a-specialist {
+        grid-template-columns: minmax(100px, 300px) minmax(100px, 300px);
+        grid-template-areas:
+            "title title"
+            ". ."
+            "btn btn";
+        grid-template-rows: 70px 25px 46px;
+        justify-items: center;
+        text-align: center;
+
+        .btn_find {
+            .top-arrow {
+                top: -35px;
+                left: -152px;
+                width: 65%;
+            }
+
+            .bottom-arrow {
+                bottom: -50px;
+                left: -30px;
+                width: 35%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .select-a-specialist {
+        
+        .title{
+                justify-self: center;
+        }
+    }
+}
