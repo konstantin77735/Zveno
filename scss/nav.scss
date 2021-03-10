@@ -110,14 +110,14 @@
         cursor: pointer;
         text-decoration: none;
         transition: all .2s linear;
-        
+
         &:hover:not(.number) {
             color: #ddd;
         }
 
         &_white {
             background: #fff;
-            
+
             &:hover {
                 box-shadow: 0 0 12px #fff;
             }
@@ -201,7 +201,7 @@
     }
 
     .nav-footer {
-        top: 110px;
+        top: 106px;
         grid-template-areas:
             '. . companies companies'
             '. . applicants applicants'

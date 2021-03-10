@@ -39,9 +39,12 @@
 
         .pyramid {
             grid-area: pyramid;
-            max-width: 100%;
             z-index: 1;
             background: none;
+
+            position: relative;
+            top: -10px;
+            max-width: 103%;
         }
 
         .text_important {
@@ -50,7 +53,7 @@
 
         .zero1 {
             grid-area: zero1;
-            width: 384px;
+            width: 388px;
             max-width: 435px;
 
             &__img {
@@ -69,7 +72,7 @@
 
         .zero2 {
             grid-area: zero2;
-            width: 360px;
+            width: 388px;
             max-width: 440px;
             justify-self: self-end;
             justify-content: flex-end;
@@ -77,7 +80,7 @@
 
         .zero3 {
             grid-area: zero3;
-            width: 384px;
+            width: 388px;
             max-width: 435px;
 
             &__img {
@@ -96,7 +99,7 @@
 
         .zero4 {
             grid-area: zero4;
-            width: 384px;
+            width: 388px;
             max-width: 435px;
             justify-self: self-end;
             justify-content: flex-end;
@@ -122,7 +125,7 @@
 
         .zero5 {
             grid-area: zero5;
-            width: 384px;
+            width: 388px;
             max-width: 435px;
             border-radius: 10px 10px 0px 10px;
 
@@ -149,6 +152,9 @@
 
             .pyramid {
                 justify-self: center;
+
+                top: -10px;
+                max-width: 102%;
             }
 
 
@@ -226,8 +232,12 @@
 
 
             .pyramid {
-                height: 100%;
                 max-height: initial;
+                height: 103%;
+
+                position: relative;
+                top: -5px;
+
             }
 
             .zero2,
